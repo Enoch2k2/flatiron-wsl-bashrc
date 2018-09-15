@@ -23,3 +23,4 @@ Convert the file to use unix endings
 ```
 dos2unix .bashrc
 ```
+Restart your terminal
