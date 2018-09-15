@@ -57,15 +57,15 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 gb() {
-        echo -n '(' && git branch 2>/dev/null | grep '^*' | colrm 1 2 | tr -d '\n' && echo  -n ')'
+    echo -n '(' && git branch 2>/dev/null | grep '^*' | colrm 1 2 | tr -d '\n' && echo  -n ')'
 }
 git_branch() {
-        gb | sed 's/()//'
+    gb | sed 's/()//'
 }
 
 # \[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] 
 if [ "$color_prompt" = yes ]; then
-        PS1='[\t] \[\033[0m\033[0;32m\] \W \[\033[0;31m\]$(git_branch)\n\[\033[0m\033[0;32m\]\[\033[0;36m\]// \[\033[0;31m\]♥ \[\033[0m\] '
+    PS1='[\t] \[\033[0m\033[0;32m\] \W \[\033[0;31m\]$(git_branch)\n\[\033[0m\033[0;32m\]\[\033[0;36m\]// \[\033[0;31m\]♥ \[\033[0m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
