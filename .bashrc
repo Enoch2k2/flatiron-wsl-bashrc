@@ -100,8 +100,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# Add alias for going to the code directory automatically
-# alias cdcode="${$(wslpath $(cmd.exe /C "echo %USERPROFILE%"))}/code"
+# Add alias for going to the labs directory automatically
+alias labs="cd $(echo $(wslpath $(cmd.exe /C "echo %USERPROFILE%") | tr -d '\r'))/dev/flatiron/labs"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
