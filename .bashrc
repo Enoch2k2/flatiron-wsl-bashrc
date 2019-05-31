@@ -101,7 +101,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Add alias for going to the code directory automatically
-alias cdcode="${$(wslpath $(cmd.exe /C "echo %USERPROFILE%"))}/code"
+# alias cdcode="${$(wslpath $(cmd.exe /C "echo %USERPROFILE%"))}/code"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
